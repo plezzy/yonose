@@ -88,9 +88,9 @@ html
 
 .nav__icon
 {
-    display: none;
+    /* width: 0px; */
     color: white;
-    font-size: 1.8rem;
+    font-size: 0rem;
     transition: all 0.3s;
 }
 
@@ -877,6 +877,7 @@ html
         height: 80px;
         border-left: 1px solid gray;
         display: inline-block;
+        font-size: 1.8rem;
         /* margin-left: auto; */
         /* margin-right: 10px; */
         padding-left: 30px;
