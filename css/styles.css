@@ -474,20 +474,28 @@ html
 {
     width: 100%;
     /* height: auto; */
+    transform: scale(0);
     height: 0;
     background-color: rgb(192, 158, 241);
 
     overflow: hidden;
 
-    transform: scale(0);
-    transition: all 0.8s;
+    transition: all 0.5s;
 }
 
 .faqs__show
 {
     height: auto;
     transform: scale(1);
+
+    /* transition: all 0.8s; */
 }
+
+/* .faqs__close
+{
+    transform: scale(0);
+    height: 0;
+} */
 
 .faqs__main-title
 {
