@@ -109,6 +109,7 @@ html
 
 .nav__link
 {
+    
     text-decoration: none;
     color: white;
     line-height: 80px;
@@ -473,22 +474,28 @@ html
 .faqs
 {
     width: 100%;
-    /* height: auto; */
-    transform: scale(0);
+    height: 0px;
+    /* transform: scale(0); */
     height: 0;
     background-color: rgb(192, 158, 241);
 
     overflow: hidden;
 
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
 }
 
-.faqs__show
+.faqs--show
 {
-    height: auto;
-    transform: scale(1);
+    animation-name: showFaqs;
+    /* animation-direction: ; */
+    /* animation-delay: 2s; */
+    animation-duration: 0.7s;
+}
 
-    /* transition: all 0.8s; */
+.faqs--hide
+{
+    animation-name: hideFaqs;
+    animation-duration: 1.2s;
 }
 
 /* .faqs__close
@@ -810,7 +817,31 @@ html
     text-align: center;
 }
 
+@keyframes showFaqs 
+{
+    from
+    {
+        height: 0px;
+    } 
 
+    to
+    {
+        height: 1460px;
+    }
+}
+
+@keyframes hideFaqs 
+{
+    from
+    {
+        height: 1460px;
+    } 
+
+    to
+    {
+        height: 0px;
+    }
+}
 
 
 
@@ -874,6 +905,7 @@ html
         /* padding-left: 20px; */
         border-left: 1px solid gray;
         padding-left: 30px;
+        width: 100%;
     }
     
     .nav__item:hover .nav__link
@@ -897,6 +929,9 @@ html
         display: flex;
         align-items: center;
         text-align: left;
+        
+        padding-right: 0;
+        /* padding: 0; */
     }
     
     .contact__social-container
